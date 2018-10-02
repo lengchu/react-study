@@ -55,6 +55,9 @@ const idReducer = (state = initialState.get('ids'), action = {}) => {
         case types.ADD: 
             return state.push(action.acc.id)
         case types.DELETE: 
+            const index = state.indexOf(action.id)
+            if (index !== -1)
+                return state.remove(index)
             return state
         default: 
             return state

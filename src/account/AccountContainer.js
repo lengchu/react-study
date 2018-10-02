@@ -35,7 +35,7 @@ class AccountContainer extends Component {
 
     getAccById = id => this.props.accs.toJS()[id]
 
-    mockGenId = () => this.props.ids.toJS().pop() + 1
+    mockGenId = () => this.props.ids.toJS().pop() + 1 || 1
 }
 
 const mapStateToProps = (state) => {
